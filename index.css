@@ -1,0 +1,28 @@
+#app {
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    list-style-type: none;
+    height: 80vh;
+}
+
+li {
+    padding: 8px;
+}
+
+.chatbox {
+    height: 5vh;
+}
+
+.bot {
+    background-color: white;
+}
+
+.me {
+    background-color: rgb(90, 92, 209);
+    color: white;
+    text-align: right;
+}
+
