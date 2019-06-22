@@ -7,12 +7,17 @@ class TranslateBot {
 		this.root.innerHTML = this.constructor.template
 		this.$MsgList = this.root.querySelector('.messages')
 		this.$TextInput = this.root.querySelector('.text-input')
-		this.$SendBtn = this.root.querySelector('.send-btn').addEventListener('click', this.translate.bind(this))
+		this.$TextInput.addEventListener('keydown', e => {
+			if (e.keyCode === 13) {
+				this.translate()
+			}
+		})
+		this.root.querySelector('.send-btn').addEventListener('click', this.translate.bind(this))
 	}
 
 	translate() {
 		const text = this.$TextInput.value.trim()
-		console.log('translate', text)
+		this.$TextInput.value = ''
 		if(!text.length>0) return
 		this.addNewMessage('me', text)
 		
@@ -42,7 +47,7 @@ TranslateBot .template = `
 	<ul class='messages'>
 	</ul>
 	<div class='chatbox'>
-		<input class='text-input'/>
+		<input type='text' class='text-input' placeholder="Type your message here..."/>
 		<button class='send-btn'>Translate</button>
 	</div>
 `

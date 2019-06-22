@@ -1,28 +1,57 @@
-#app {
-    display: flex;
-    flex-direction: column;
+* {
+    box-sizing: border-box;
 }
-
+body {
+    margin: 0;
+    overflow: hidden;
+}
+#app {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 50px;
+    justify-content: center;
+}
 ul {
     list-style-type: none;
-    height: 80vh;
+    width: 800px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 0;
+    padding: 10px 16px;
+    overflow: auto;
 }
 
 li {
     padding: 8px;
+    margin: 4px 0;
 }
 
 .chatbox {
-    height: 5vh;
+    display: flex;
+    padding: 4px 0;
+}
+
+input[type='text'] {
+    border-radius: 4px;
+    outline: none;
+    padding: 4px;
+    flex: 1 1 auto;
 }
 
 .bot {
-    background-color: white;
+    background-color: rgb(165, 165, 165);
+    width: fit-content;
+    clear: right;
+    border-radius: 15px 0;
 }
 
 .me {
     background-color: rgb(90, 92, 209);
     color: white;
-    text-align: right;
+    width: fit-content;
+    float: right;
+    clear: both;
+    display: block;
+    border-radius: 0px 15px;
 }
 
