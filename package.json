@@ -1,0 +1,15 @@
+{
+  "name": "Translate-Chatbot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/viethung26/Translate-Chatbot.git",
+  "author": "hideki",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  }
+}
